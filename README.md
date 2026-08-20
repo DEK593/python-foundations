@@ -1,7 +1,13 @@
-# Python Security Scripts
+# Python Foundations and Cyber Journey
 
-A collection of basic authentication and security scripts built while learning Python loops and logic control.
+Welcome to my repository. Here I will collect all my Python scripts and projects, starting from the basics and moving towards much more advanced concepts.
 
-## Scripts Included
-- **`password_checker.py`**: A basic password validation script with a retry limit (`while` loop + attempt counter).
-- **`atm_pin.py`**: An ATM PIN simulation script that locks out the user after 3 failed attempts (`tries` countdown + emergency `break`).
+## What you will find here:
+Basic Scripts: Initial programs to master Python logic, including inputs, loops, conditions, and small minigames like number guessing and PIN verification.
+Evolving Projects: Increasingly complex scripts as my studies and practical skills grow.
+Cybersecurity Focus: As my path progresses, I will upload tools, automation scripts, and projects related to information security and penetration testing.
+
+The goal is to document my coding growth and build a solid foundation for the future.
+
+
+Stay curious, keep coding.
