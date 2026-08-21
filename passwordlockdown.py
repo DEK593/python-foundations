@@ -23,14 +23,16 @@ while True:
                 if tentativo == esc:
                     print("uscita consentita")
                     violazioni = []
+                    tempo_blocco = 5
                     break
                 elif tentativo == root or tentativo == admin:
                     print("accesso non consentito")
                     time.sleep(tempo_blocco)
+                    tempo_blocco *=3
                 else:
                     print("negato")
                     time.sleep(50)
-                    tempo_blocco *= 3
+                    
 
     if password_inserita == esc:
         print("Uscita eseguita.")
