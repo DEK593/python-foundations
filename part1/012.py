@@ -1,0 +1,10 @@
+x = 27
+y = 15
+result = x + y 
+tuff = x - y
+molt = x * y 
+div = x / y 
+print(f"{x} + {y} = {result}")
+print(f"{x} - {y} = {tuff}")
+print(f"{x} * {y} = {molt}")
+print(f"{x} / {y} = {div}")
