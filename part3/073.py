@@ -15,3 +15,4 @@ if result >= 0:
 else:
     print("The substring does not occur twice in the string.")
     
+    
