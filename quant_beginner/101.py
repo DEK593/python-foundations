@@ -1,29 +1,37 @@
-def main():
-
-    raw_tickers = ['aapl', ' MSFT ', 'GOOGL', 'aapl', 'tsla', '  AMZN  ', 'msft', 'NFLX', 'nvda', 'aapl ']
+from math import log
 
 
-    portfolio_values = {'AAPL': 15000, 'MSFT': 8000, 'GOOGL': 25000, 'NVDA': 12000}
+raw_tickers = ["  aapl ", "msft", "aapl", "GOOGL", "  msft  ", "TSLA", "googl"]
 
 
-    prices = [145.5, 148.2, 146.0, 152.4, 151.0, 155.8]
+raw_prices = ["150.50", "310.25", "2850.80", "125.40"]
 
-    clear = {s.upper().strip() for s in raw_tickers}
 
-    port_sum =sum(portfolio_values.values())
+portfolio_values = {"AAPL": 12000, "MSFT": 8500, "GOOGL": 35000, "TSLA": 4000}
 
-    analysis = {ticker: value / port_sum for ticker, value in portfolio_values.items()}
 
-    price_dynamics = [(pr2 - pr1 ) / pr1 for pr1, pr2 in  zip(prices[:-1], prices[1:])]  # noqa: RUF007
+price_history = [100, 103, 101, 107, 110, 108]
 
-    change = [r * 100 for r in price_dynamics ]
-    
-    print(f"raw_tickers cleared: {clear}")
-    print(f"percentage weight: {analysis}")
-    print("Price Change:")
+clean = {t.upper().strip() for t in raw_tickers}
+clean_prices = list(map(float, raw_prices))
 
-    for c in change:
-        print(f"{c:.2f}%")
+filters = {t: v for t, v in portfolio_values.items() if v > 10000 }
 
-if __name__== "__main__":
-    main()
+prices = [(ps2 - ps1) / ps1 for ps1, ps2 in zip(price_history[:-1], price_history[1:])]  # noqa: RUF007
+generator = (log(price_history[i+1]/ price_history[i]) for i in range(len(price_history)-1))
+
+
+
+print(clean)
+print(clean_prices)
+print(filters)
+
+for n in generator:
+    print(n)
+
+for s in prices:
+    rir = s * 100
+    print(f"{rir:.2f}%")
+
+
+
